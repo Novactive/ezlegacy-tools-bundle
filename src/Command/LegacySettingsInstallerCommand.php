@@ -107,9 +107,9 @@ EOT
             $filesystem->remove($targetPath);
         }
 
-        $this->prepareInstallation($settingsPath, $options, $targetPath, $relativeSettingsPath, $filesystem);
+        $this->prepareInstall($settingsPath, $relativeSettingsPath, $options, $filesystem, $targetPath);
 
-        $this->install($settingsPath, $options, $filesystem, $relativeSettingsPath, $targetPath);
+        $this->install($settingsPath, $relativeSettingsPath, $options, $filesystem, $targetPath);
 
         return $targetPath;
     }
