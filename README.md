@@ -13,7 +13,7 @@ You can add the following [extra](https://getcomposer.org/doc/04-schema.md#extra
 
 Configuration            | Type             | Description                                                                                       |
 -------------------------|------------------|---------------------------------------------------------------------------------------------------|
-legacy-settings-install  | array of strings | ezpublish:legacybundles:install_settings command options. Possible entries : symlink, force       |
+legacy-settings-install  | array of strings | ezpublish:legacybundles:install_settings command options. Possible entries : copy, symlink, force |
 legacy-scripts-execution | array of strings | List of legacy scripts (with params) to be executed                                               |
 
 
@@ -34,7 +34,7 @@ Add the following line to your composer.json file :
             ...,
             "Novactive\\EzLegacyToolsBundle\\Composer\\ScriptHandler::installLegacyBundlesSettings"
         ],
-        "post-install-cmd": [
+        "post-update-cmd": [
             ...,
             "Novactive\\EzLegacyToolsBundle\\Composer\\ScriptHandler::installLegacyBundlesSettings"
         ]
@@ -58,7 +58,7 @@ Add the following line to your composer.json file :
             ...,
             "Novactive\\EzLegacyToolsBundle\\Composer\\ScriptHandler::executeLegacyScripts"
         ],
-        "post-install-cmd": [
+        "post-update-cmd": [
             ...,
             "Novactive\\EzLegacyToolsBundle\\Composer\\ScriptHandler::executeLegacyScripts"
         ]
