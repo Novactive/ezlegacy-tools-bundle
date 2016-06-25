@@ -25,6 +25,16 @@ use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 class LegacySettingsLocator implements LegacySettingsLocatorInterface
 {
     /**
+     * List of settings directories allowed to be installed
+     *
+     * @var array $allowedSettingsDirs
+     */
+    protected $allowedSettingsDirs = array(
+        'override',
+        'siteaccess'
+    );
+
+    /**
      * {@inheritDoc}
      *
      * @throws \RuntimeException if two bundles contain a legacy_settings folder
@@ -32,6 +42,8 @@ class LegacySettingsLocator implements LegacySettingsLocatorInterface
     public function getSettingsDirectories($bundles)
     {
         $legacySettingsBundles = array();
+        $directories           = array();
+
         foreach ($bundles as $bundle) {
             $bundlePath = rtrim($bundle->getPath(), '/\\');
             $legacyPath = "$bundlePath/legacy_settings/";
@@ -51,7 +63,7 @@ class LegacySettingsLocator implements LegacySettingsLocatorInterface
                     continue;
                 }
 
-                if (file_exists($item->getPathname() . '/settings.xml')) {
+                if (in_array($item->getBasename(), $this->allowedSettingsDirs)) {
                     $directories[] = $item->getPathname();
                 }
             }

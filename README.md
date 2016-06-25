@@ -75,6 +75,13 @@ Add the following line to your composer.json file :
     ...
 
 
+## Usage
+
+### Legacy settings installation
+
+The command will search for a legacy_settings folder in all project specific bundles. You can only have one bundle containing a legacy_settings directory otherwise an exception will be thrown.
+
+The command will then search for a 'override' and 'siteaccess' directories in the legacy_settings directory.
 
 
 ## Contributing
