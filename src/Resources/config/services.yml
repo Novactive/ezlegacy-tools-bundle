@@ -1,0 +1,6 @@
+parameters:
+   ezpublish_legacy.legacy_bundles.settings_locator.class: Novactive\EzLegacyToolsBundle\Locator\LegacySettingsLocator
+
+services:
+    ezpublish_legacy.legacy_bundles.settings_locator:
+        class: %ezpublish_legacy.legacy_bundles.settings_locator.class%

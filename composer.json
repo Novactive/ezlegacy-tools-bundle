@@ -1,0 +1,19 @@
+{
+    "name": "novactive/ezlegacy-tools-bundle",
+    "description": "Novactive eZ Publish Legacy Tools Bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guillaume Maïssa",
+            "email": "g.maissa@novactive.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"Novactive\\EzLegacyToolsBundle\\": "src/"}
+    },
+    "require-dev": {
+        "novactive/phpcs-novastandards": "^1.3",
+        "phpmd/phpmd": "^2.4",
+        "sebastian/phpcpd": "^2.0"
+    }
+}
