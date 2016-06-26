@@ -2,6 +2,7 @@
     "name": "novactive/ezlegacy-tools-bundle",
     "description": "Novactive eZ Publish Legacy Tools Bundle",
     "license": "MIT",
+    "keywords": ["eZ Publish", "legacy", "settings", "install"],
     "authors": [
         {
             "name": "Guillaume Maïssa",
