@@ -23,6 +23,19 @@ With composer :
 
     php composer.phar require novactive/ezlegacy-tools-bundle 
 
+Enable the bundle :
+
+    <?php
+    // ezpublish/EzPublishKernel.php
+
+    public function registerBundles()
+    {
+        $bundles = array(
+            // ...
+            new Novactive\EzLegacyToolsBundle\NovactiveEzLegacyToolsBundle(),
+        );
+    }
+
 ### Legacy settings installation
 
 Add the following line to your composer.json file :
