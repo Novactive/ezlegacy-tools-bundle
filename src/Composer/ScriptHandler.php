@@ -45,7 +45,7 @@ class ScriptHandler extends DistributionBundleScriptHandler
 
         if (!is_dir($appDir)) {
             echo 'The symfony-app-dir (' . $appDir . ') specified in composer.json was not found in ' .
-                 getcwd() . ', can not install assets.' . PHP_EOL;
+                 getcwd() . ', can not install settings.' . PHP_EOL;
 
             return;
         }

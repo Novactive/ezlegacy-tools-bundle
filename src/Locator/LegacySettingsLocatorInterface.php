@@ -31,4 +31,13 @@ interface LegacySettingsLocatorInterface
      * @return array An array of path to legacy settings
      */
     public function getSettingsDirectories($bundles);
+
+    /**
+     * Returns the path to legacy configuration files within $bundles
+     *
+     * @param array $bundles array of bundles
+     *
+     * @return array An array of path to legacy configuration files
+     */
+    public function getSettingsFiles($bundles);
 }
