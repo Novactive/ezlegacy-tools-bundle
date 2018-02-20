@@ -14,7 +14,7 @@
     },
     "require": {
         "symphony/symphony": "^3.0",
-        "ezsystems/legacy-bridge": "^2.0",
+        "ezsystems/legacy-bridge": "^2.0"
     },
     "require-dev": {
         "novactive/phpcs-novastandards": "^1.3",
