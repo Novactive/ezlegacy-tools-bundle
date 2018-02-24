@@ -11,7 +11,7 @@
 namespace Novactive\EzLegacyToolsBundle\Composer;
 
 use Sensio\Bundle\DistributionBundle\Composer\ScriptHandler as DistributionBundleScriptHandler;
-use Composer\Script\CommandEvent;
+use Composer\Script\Event;
 
 /**
  * eZ Publish Legacy Tools Composer Script class
@@ -28,7 +28,7 @@ class ScriptHandler extends DistributionBundleScriptHandler
      *
      * @param CommandEvent $event composer command even
      */
-    public static function installLegacyBundlesSettings(CommandEvent $event)
+    public static function installLegacyBundlesSettings(Event $event)
     {
         $options = self::getOptions($event);
         $appDir  = $options['symfony-app-dir'];
@@ -58,7 +58,7 @@ class ScriptHandler extends DistributionBundleScriptHandler
      *
      * @param CommandEvent $event composer command even
      */
-    public static function executeLegacyScripts(CommandEvent $event)
+    public static function executeLegacyScripts(Event $event)
     {
         $options = self::getOptions($event);
         $appDir  = $options['symfony-app-dir'];
