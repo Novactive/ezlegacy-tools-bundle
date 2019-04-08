@@ -14,7 +14,7 @@
     },
     "require": {
         "symfony/symfony": "^3.0",
-        "ezsystems/legacy-bridge": "^2.*"
+        "ezsystems/legacy-bridge": "^2.1@rc"
     },
     "require-dev": {
         "novactive/phpcs-novastandards": "^1.3",
